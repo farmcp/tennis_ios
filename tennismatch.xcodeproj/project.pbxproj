@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E3B06FE1800F0460006EB79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B06FD1800F0460006EB79 /* Foundation.framework */; };
+		3E3B07001800F0460006EB79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B06FF1800F0460006EB79 /* CoreGraphics.framework */; };
+		3E3B07021800F0460006EB79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B07011800F0460006EB79 /* UIKit.framework */; };
+		3E3B07081800F0460006EB79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E3B07061800F0460006EB79 /* InfoPlist.strings */; };
+		3E3B070A1800F0460006EB79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B07091800F0460006EB79 /* main.m */; };
+		3E3B070E1800F0460006EB79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B070D1800F0460006EB79 /* AppDelegate.m */; };
+		3E3B07111800F0460006EB79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3B070F1800F0460006EB79 /* Main.storyboard */; };
+		3E3B07141800F0460006EB79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B07131800F0460006EB79 /* ViewController.m */; };
+		3E3B07161800F0460006EB79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E3B07151800F0460006EB79 /* Images.xcassets */; };
+		3E3B071D1800F0460006EB79 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B071C1800F0460006EB79 /* XCTest.framework */; };
+		3E3B071E1800F0460006EB79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B06FD1800F0460006EB79 /* Foundation.framework */; };
+		3E3B071F1800F0460006EB79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B07011800F0460006EB79 /* UIKit.framework */; };
+		3E3B07271800F0460006EB79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E3B07251800F0460006EB79 /* InfoPlist.strings */; };
+		3E3B07291800F0460006EB79 /* tennismatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B07281800F0460006EB79 /* tennismatchTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E3B07201800F0460006EB79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E3B06F21800F0460006EB79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E3B06F91800F0460006EB79;
+			remoteInfo = tennismatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E3B06FA1800F0460006EB79 /* tennismatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tennismatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E3B06FD1800F0460006EB79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3E3B06FF1800F0460006EB79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E3B07011800F0460006EB79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3E3B07051800F0460006EB79 /* tennismatch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tennismatch-Info.plist"; sourceTree = "<group>"; };
+		3E3B07071800F0460006EB79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E3B07091800F0460006EB79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3E3B070B1800F0460006EB79 /* tennismatch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tennismatch-Prefix.pch"; sourceTree = "<group>"; };
+		3E3B070C1800F0460006EB79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3E3B070D1800F0460006EB79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3E3B07101800F0460006EB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E3B07121800F0460006EB79 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3E3B07131800F0460006EB79 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3E3B07151800F0460006EB79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3E3B071B1800F0460006EB79 /* tennismatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tennismatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E3B071C1800F0460006EB79 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3E3B07241800F0460006EB79 /* tennismatchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tennismatchTests-Info.plist"; sourceTree = "<group>"; };
+		3E3B07261800F0460006EB79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E3B07281800F0460006EB79 /* tennismatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tennismatchTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E3B06F71800F0460006EB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E3B07001800F0460006EB79 /* CoreGraphics.framework in Frameworks */,
+				3E3B07021800F0460006EB79 /* UIKit.framework in Frameworks */,
+				3E3B06FE1800F0460006EB79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E3B07181800F0460006EB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E3B071D1800F0460006EB79 /* XCTest.framework in Frameworks */,
+				3E3B071F1800F0460006EB79 /* UIKit.framework in Frameworks */,
+				3E3B071E1800F0460006EB79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E3B06F11800F0460006EB79 = {
+			isa = PBXGroup;
+			children = (
+				3E3B07031800F0460006EB79 /* tennismatch */,
+				3E3B07221800F0460006EB79 /* tennismatchTests */,
+				3E3B06FC1800F0460006EB79 /* Frameworks */,
+				3E3B06FB1800F0460006EB79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E3B06FB1800F0460006EB79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E3B06FA1800F0460006EB79 /* tennismatch.app */,
+				3E3B071B1800F0460006EB79 /* tennismatchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E3B06FC1800F0460006EB79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E3B06FD1800F0460006EB79 /* Foundation.framework */,
+				3E3B06FF1800F0460006EB79 /* CoreGraphics.framework */,
+				3E3B07011800F0460006EB79 /* UIKit.framework */,
+				3E3B071C1800F0460006EB79 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E3B07031800F0460006EB79 /* tennismatch */ = {
+			isa = PBXGroup;
+			children = (
+				3E3B070C1800F0460006EB79 /* AppDelegate.h */,
+				3E3B070D1800F0460006EB79 /* AppDelegate.m */,
+				3E3B070F1800F0460006EB79 /* Main.storyboard */,
+				3E3B07121800F0460006EB79 /* ViewController.h */,
+				3E3B07131800F0460006EB79 /* ViewController.m */,
+				3E3B07151800F0460006EB79 /* Images.xcassets */,
+				3E3B07041800F0460006EB79 /* Supporting Files */,
+			);
+			path = tennismatch;
+			sourceTree = "<group>";
+		};
+		3E3B07041800F0460006EB79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E3B07051800F0460006EB79 /* tennismatch-Info.plist */,
+				3E3B07061800F0460006EB79 /* InfoPlist.strings */,
+				3E3B07091800F0460006EB79 /* main.m */,
+				3E3B070B1800F0460006EB79 /* tennismatch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E3B07221800F0460006EB79 /* tennismatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E3B07281800F0460006EB79 /* tennismatchTests.m */,
+				3E3B07231800F0460006EB79 /* Supporting Files */,
+			);
+			path = tennismatchTests;
+			sourceTree = "<group>";
+		};
+		3E3B07231800F0460006EB79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E3B07241800F0460006EB79 /* tennismatchTests-Info.plist */,
+				3E3B07251800F0460006EB79 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E3B06F91800F0460006EB79 /* tennismatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E3B072C1800F0460006EB79 /* Build configuration list for PBXNativeTarget "tennismatch" */;
+			buildPhases = (
+				3E3B06F61800F0460006EB79 /* Sources */,
+				3E3B06F71800F0460006EB79 /* Frameworks */,
+				3E3B06F81800F0460006EB79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tennismatch;
+			productName = tennismatch;
+			productReference = 3E3B06FA1800F0460006EB79 /* tennismatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E3B071A1800F0460006EB79 /* tennismatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E3B072F1800F0460006EB79 /* Build configuration list for PBXNativeTarget "tennismatchTests" */;
+			buildPhases = (
+				3E3B07171800F0460006EB79 /* Sources */,
+				3E3B07181800F0460006EB79 /* Frameworks */,
+				3E3B07191800F0460006EB79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E3B07211800F0460006EB79 /* PBXTargetDependency */,
+			);
+			name = tennismatchTests;
+			productName = tennismatchTests;
+			productReference = 3E3B071B1800F0460006EB79 /* tennismatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E3B06F21800F0460006EB79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = com.ordinance;
+				TargetAttributes = {
+					3E3B071A1800F0460006EB79 = {
+						TestTargetID = 3E3B06F91800F0460006EB79;
+					};
+				};
+			};
+			buildConfigurationList = 3E3B06F51800F0460006EB79 /* Build configuration list for PBXProject "tennismatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E3B06F11800F0460006EB79;
+			productRefGroup = 3E3B06FB1800F0460006EB79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E3B06F91800F0460006EB79 /* tennismatch */,
+				3E3B071A1800F0460006EB79 /* tennismatchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E3B06F81800F0460006EB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E3B07161800F0460006EB79 /* Images.xcassets in Resources */,
+				3E3B07081800F0460006EB79 /* InfoPlist.strings in Resources */,
+				3E3B07111800F0460006EB79 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E3B07191800F0460006EB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E3B07271800F0460006EB79 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E3B06F61800F0460006EB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E3B07141800F0460006EB79 /* ViewController.m in Sources */,
+				3E3B070E1800F0460006EB79 /* AppDelegate.m in Sources */,
+				3E3B070A1800F0460006EB79 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E3B07171800F0460006EB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E3B07291800F0460006EB79 /* tennismatchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E3B07211800F0460006EB79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E3B06F91800F0460006EB79 /* tennismatch */;
+			targetProxy = 3E3B07201800F0460006EB79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E3B07061800F0460006EB79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E3B07071800F0460006EB79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3E3B070F1800F0460006EB79 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E3B07101800F0460006EB79 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E3B07251800F0460006EB79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E3B07261800F0460006EB79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E3B072A1800F0460006EB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3E3B072B1800F0460006EB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E3B072D1800F0460006EB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tennismatch/tennismatch-Prefix.pch";
+				INFOPLIST_FILE = "tennismatch/tennismatch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3E3B072E1800F0460006EB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tennismatch/tennismatch-Prefix.pch";
+				INFOPLIST_FILE = "tennismatch/tennismatch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3E3B07301800F0460006EB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tennismatch.app/tennismatch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tennismatch/tennismatch-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tennismatchTests/tennismatchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3E3B07311800F0460006EB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tennismatch.app/tennismatch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tennismatch/tennismatch-Prefix.pch";
+				INFOPLIST_FILE = "tennismatchTests/tennismatchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E3B06F51800F0460006EB79 /* Build configuration list for PBXProject "tennismatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E3B072A1800F0460006EB79 /* Debug */,
+				3E3B072B1800F0460006EB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E3B072C1800F0460006EB79 /* Build configuration list for PBXNativeTarget "tennismatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E3B072D1800F0460006EB79 /* Debug */,
+				3E3B072E1800F0460006EB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3E3B072F1800F0460006EB79 /* Build configuration list for PBXNativeTarget "tennismatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E3B07301800F0460006EB79 /* Debug */,
+				3E3B07311800F0460006EB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E3B06F21800F0460006EB79 /* Project object */;
+}
