@@ -25,9 +25,10 @@
         <!--Navigation Controller - Tennis Courts-->
         <scene sceneID="dK5-pl-VYP">
             <objects>
-                <navigationController definesPresentationContext="YES" id="ch3-Xa-UoI" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="ch3-Xa-UoI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tennis Courts" id="6vA-E0-8gg"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r03-9d-jyJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="r03-9d-jyJ">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -43,12 +44,12 @@
             <objects>
                 <tableViewController title="Tennis Court Table" id="Jca-JN-yEf" customClass="TennisCourtTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="707-5O-7zX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ska-Eb-Obo">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ska-Eb-Obo" id="nql-fA-R8s">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -66,25 +67,44 @@
                         <barButtonItem key="leftBarButtonItem" title="Filter" id="4TF-0i-sjO" userLabel="Filter">
                             <connections>
                                 <action selector="filterButtonClick:" destination="Jca-JN-yEf" id="A7P-FM-FCu"/>
-                                <segue destination="pHg-bH-P1b" kind="push" identifier="courtFilterSegue" id="ntX-bL-5Li"/>
+                                <segue destination="pHg-bH-P1b" kind="push" identifier="courtFilterSegue" customClass="FlipSegue" id="ntX-bL-5Li"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Map" id="qgs-UP-f8u" userLabel="Map View">
                             <connections>
                                 <action selector="mapViewButtonClick:" destination="Jca-JN-yEf" id="bbO-cL-QjQ"/>
-                                <segue destination="qUt-6M-ZeG" kind="push" identifier="mapViewSegue" id="3Uv-Wk-oMo"/>
+                                <segue destination="qUt-6M-ZeG" kind="custom" identifier="mapViewSegue" customClass="FlipSegue" id="3Uv-Wk-oMo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="PwM-bD-HDe" id="uQJ-N2-nMF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyO-p0-oRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Kpn-aO-Nmi">
+                    <connections>
+                        <outlet property="delegate" destination="Jca-JN-yEf" id="aB5-iS-9SS"/>
+                        <outlet property="searchContentsController" destination="Jca-JN-yEf" id="22M-hr-qCc"/>
+                        <outlet property="searchResultsDataSource" destination="Jca-JN-yEf" id="ega-Ja-G5P"/>
+                        <outlet property="searchResultsDelegate" destination="Jca-JN-yEf" id="gRK-bX-05U"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="PwM-bD-HDe">
+                    <connections>
+                        <outlet property="delegate" destination="Jca-JN-yEf" id="4XK-wF-o5t"/>
+                        <outlet property="searchContentsController" destination="Jca-JN-yEf" id="snJ-fD-2QP"/>
+                        <outlet property="searchResultsDataSource" destination="Jca-JN-yEf" id="FdM-pZ-3Yw"/>
+                        <outlet property="searchResultsDelegate" destination="Jca-JN-yEf" id="Wkx-sG-CI8"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="801" y="-22"/>
         </scene>
-        <!--View Controller - Map Tennis Courts-->
+        <!--Tennis Court Map View Controller - Map Tennis Courts-->
         <scene sceneID="2H0-88-tKR">
             <objects>
-                <viewController title="Map Tennis Courts" id="qUt-6M-ZeG" sceneMemberID="viewController">
+                <viewController title="Map Tennis Courts" id="qUt-6M-ZeG" customClass="TennisCourtMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QU0-7W-dfu"/>
                         <viewControllerLayoutGuide type="bottom" id="hYT-CV-UBs"/>
@@ -109,7 +129,7 @@
                         <viewControllerLayoutGuide type="bottom" id="IVe-l7-XdO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cLH-HW-H6l">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
