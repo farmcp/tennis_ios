@@ -22,7 +22,7 @@
 
 -(IBAction)filterButtonClick:(UIButton *)sender
 {
-    //go to teh filter view
+    //go to the filter view
     [self performSegueWithIdentifier:@"courtFilterSegue" sender:nil];
 }
 
