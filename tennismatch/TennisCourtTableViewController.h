@@ -11,5 +11,6 @@
 @interface TennisCourtTableViewController : UITableViewController
 
 -(IBAction)mapViewButtonClick:(UIButton*)sender;
+-(IBAction)filterButtonClick:(UIButton *)sender;
 
 @end
