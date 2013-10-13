@@ -20,6 +20,12 @@
     [self performSegueWithIdentifier:@"mapViewSegue" sender:nil];
 }
 
+-(IBAction)filterButtonClick:(UIButton *)sender
+{
+    //go to teh filter view
+    [self performSegueWithIdentifier:@"courtFilterSegue" sender:nil];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];

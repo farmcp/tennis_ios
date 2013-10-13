@@ -62,7 +62,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tennis Courts" id="EAc-Ow-F8C">
-                        <barButtonItem key="rightBarButtonItem" title="Map View" style="plain" id="qgs-UP-f8u" userLabel="Bar Button Item">
+                        <barButtonItem key="backBarButtonItem" title="List" id="Yrl-9g-k9K" userLabel="Back - List View"/>
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="4TF-0i-sjO" userLabel="Filter">
+                            <connections>
+                                <action selector="filterButtonClick:" destination="Jca-JN-yEf" id="A7P-FM-FCu"/>
+                                <segue destination="pHg-bH-P1b" kind="push" identifier="courtFilterSegue" id="ntX-bL-5Li"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="qgs-UP-f8u" userLabel="Map View">
                             <connections>
                                 <action selector="mapViewButtonClick:" destination="Jca-JN-yEf" id="bbO-cL-QjQ"/>
                                 <segue destination="qUt-6M-ZeG" kind="push" identifier="mapViewSegue" id="3Uv-Wk-oMo"/>
@@ -87,11 +94,30 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mn2-CK-3Sv"/>
+                    <navigationItem key="navigationItem" title="Map View" id="mn2-CK-3Sv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHV-KU-sT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173" y="-22"/>
+            <point key="canvasLocation" x="1332" y="-22"/>
+        </scene>
+        <!--View Controller - Tennis Court Filter-->
+        <scene sceneID="hrl-0b-ULG">
+            <objects>
+                <viewController title="Tennis Court Filter" id="pHg-bH-P1b" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mi4-W1-gAJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="IVe-l7-XdO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cLH-HW-H6l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Court Filter" id="XBJ-6u-4QZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5a-sA-0bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="628"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
