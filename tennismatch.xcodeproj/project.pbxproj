@@ -14,13 +14,13 @@
 		3E3B070A1800F0460006EB79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B07091800F0460006EB79 /* main.m */; };
 		3E3B070E1800F0460006EB79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B070D1800F0460006EB79 /* AppDelegate.m */; };
 		3E3B07111800F0460006EB79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3B070F1800F0460006EB79 /* Main.storyboard */; };
-		3E3B07141800F0460006EB79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B07131800F0460006EB79 /* ViewController.m */; };
 		3E3B07161800F0460006EB79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E3B07151800F0460006EB79 /* Images.xcassets */; };
 		3E3B071D1800F0460006EB79 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B071C1800F0460006EB79 /* XCTest.framework */; };
 		3E3B071E1800F0460006EB79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B06FD1800F0460006EB79 /* Foundation.framework */; };
 		3E3B071F1800F0460006EB79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B07011800F0460006EB79 /* UIKit.framework */; };
 		3E3B07271800F0460006EB79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E3B07251800F0460006EB79 /* InfoPlist.strings */; };
 		3E3B07291800F0460006EB79 /* tennismatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B07281800F0460006EB79 /* tennismatchTests.m */; };
+		3E619BDE180A7A0100EA3EEB /* TennisCourtTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BDD180A7A0100EA3EEB /* TennisCourtTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +45,14 @@
 		3E3B070C1800F0460006EB79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E3B070D1800F0460006EB79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3E3B07101800F0460006EB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3E3B07121800F0460006EB79 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3E3B07131800F0460006EB79 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3E3B07151800F0460006EB79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3E3B071B1800F0460006EB79 /* tennismatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tennismatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3B071C1800F0460006EB79 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3E3B07241800F0460006EB79 /* tennismatchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tennismatchTests-Info.plist"; sourceTree = "<group>"; };
 		3E3B07261800F0460006EB79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E3B07281800F0460006EB79 /* tennismatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tennismatchTests.m; sourceTree = "<group>"; };
+		3E619BDC180A7A0100EA3EEB /* TennisCourtTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TennisCourtTableViewController.h; sourceTree = "<group>"; };
+		3E619BDD180A7A0100EA3EEB /* TennisCourtTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TennisCourtTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +114,9 @@
 			children = (
 				3E3B070C1800F0460006EB79 /* AppDelegate.h */,
 				3E3B070D1800F0460006EB79 /* AppDelegate.m */,
+				3E619BDC180A7A0100EA3EEB /* TennisCourtTableViewController.h */,
+				3E619BDD180A7A0100EA3EEB /* TennisCourtTableViewController.m */,
 				3E3B070F1800F0460006EB79 /* Main.storyboard */,
-				3E3B07121800F0460006EB79 /* ViewController.h */,
-				3E3B07131800F0460006EB79 /* ViewController.m */,
 				3E3B07151800F0460006EB79 /* Images.xcassets */,
 				3E3B07041800F0460006EB79 /* Supporting Files */,
 			);
@@ -249,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E3B07141800F0460006EB79 /* ViewController.m in Sources */,
+				3E619BDE180A7A0100EA3EEB /* TennisCourtTableViewController.m in Sources */,
 				3E3B070E1800F0460006EB79 /* AppDelegate.m in Sources */,
 				3E3B070A1800F0460006EB79 /* main.m in Sources */,
 			);
@@ -460,6 +460,7 @@
 				3E3B072E1800F0460006EB79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E3B072F1800F0460006EB79 /* Build configuration list for PBXNativeTarget "tennismatchTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +469,7 @@
 				3E3B07311800F0460006EB79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
