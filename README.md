@@ -1,4 +1,4 @@
-tennis_ios
+Tennismatch for iOS
 ==========
 
 tennismatch for ios
