@@ -30,6 +30,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="r03-9d-jyJ">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Jca-JN-yEf" kind="relationship" relationship="rootViewController" id="wkP-Q3-F4F"/>
@@ -48,12 +52,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ska-Eb-Obo">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="jYz-qP-TaS" detailTextLabel="EUx-gz-5Ic" style="IBUITableViewCellStyleSubtitle" id="ska-Eb-Obo">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ska-Eb-Obo" id="nql-fA-R8s">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jYz-qP-TaS">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EUx-gz-5Ic">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -65,12 +85,14 @@
                     <navigationItem key="navigationItem" title="Tennis Courts" id="EAc-Ow-F8C">
                         <barButtonItem key="backBarButtonItem" title="List" id="Yrl-9g-k9K" userLabel="Back - List View"/>
                         <barButtonItem key="leftBarButtonItem" title="Filter" id="4TF-0i-sjO" userLabel="Filter">
+                            <color key="tintColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                             <connections>
                                 <action selector="filterButtonClick:" destination="Jca-JN-yEf" id="A7P-FM-FCu"/>
                                 <segue destination="pHg-bH-P1b" kind="push" identifier="courtFilterSegue" customClass="FlipSegue" id="ntX-bL-5Li"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Map" id="qgs-UP-f8u" userLabel="Map View">
+                            <color key="tintColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                             <connections>
                                 <action selector="mapViewButtonClick:" destination="Jca-JN-yEf" id="bbO-cL-QjQ"/>
                                 <segue destination="qUt-6M-ZeG" kind="custom" identifier="mapViewSegue" customClass="FlipSegue" id="3Uv-Wk-oMo"/>

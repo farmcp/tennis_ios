@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				3E619BE6180A9E4D00EA3EEB /* TennisCourtControllers */,
-				3E619BE2180A9DBF00EA3EEB /* Segues */,
+				3E619BE2180A9DBF00EA3EEB /* Segues and Animations */,
 				3E3B070C1800F0460006EB79 /* AppDelegate.h */,
 				3E3B070D1800F0460006EB79 /* AppDelegate.m */,
 				3E3B070F1800F0460006EB79 /* Main.storyboard */,
@@ -158,13 +158,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3E619BE2180A9DBF00EA3EEB /* Segues */ = {
+		3E619BE2180A9DBF00EA3EEB /* Segues and Animations */ = {
 			isa = PBXGroup;
 			children = (
 				3E619BDF180A989900EA3EEB /* FlipSegue.h */,
 				3E619BE0180A989900EA3EEB /* FlipSegue.m */,
 			);
-			name = Segues;
+			name = "Segues and Animations";
 			sourceTree = "<group>";
 		};
 		3E619BE6180A9E4D00EA3EEB /* TennisCourtControllers */ = {
