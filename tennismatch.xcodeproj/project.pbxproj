@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3E3B06FA1800F0460006EB79 /* tennismatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tennismatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E3B06FA1800F0460006EB79 /* Tennismatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tennismatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3B06FD1800F0460006EB79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E3B06FF1800F0460006EB79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3E3B07011800F0460006EB79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -98,7 +98,7 @@
 		3E3B06FB1800F0460006EB79 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E3B06FA1800F0460006EB79 /* tennismatch.app */,
+				3E3B06FA1800F0460006EB79 /* Tennismatch.app */,
 				3E3B071B1800F0460006EB79 /* tennismatchTests.xctest */,
 			);
 			name = Products;
@@ -195,7 +195,7 @@
 			);
 			name = tennismatch;
 			productName = tennismatch;
-			productReference = 3E3B06FA1800F0460006EB79 /* tennismatch.app */;
+			productReference = 3E3B06FA1800F0460006EB79 /* Tennismatch.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3E3B071A1800F0460006EB79 /* tennismatchTests */ = {
@@ -409,7 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tennismatch/tennismatch-Prefix.pch";
 				INFOPLIST_FILE = "tennismatch/tennismatch-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tennismatch;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -422,7 +422,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tennismatch/tennismatch-Prefix.pch";
 				INFOPLIST_FILE = "tennismatch/tennismatch-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tennismatch;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

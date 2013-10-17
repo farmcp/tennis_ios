@@ -13,7 +13,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //Set the header color
-    //[[UINavigationBar appearance] setBarTintColor:[UIColor blueColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     // Override point for customization after application launch.
     return YES;
