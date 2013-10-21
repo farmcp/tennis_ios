@@ -23,6 +23,7 @@
 		3E619BDE180A7A0100EA3EEB /* TennisCourtTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BDD180A7A0100EA3EEB /* TennisCourtTableViewController.m */; };
 		3E619BE1180A989900EA3EEB /* FlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BE0180A989900EA3EEB /* FlipSegue.m */; };
 		3E619BE5180A9E4500EA3EEB /* TennisCourtMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BE4180A9E4500EA3EEB /* TennisCourtMapViewController.m */; };
+		3ED791C11814AB0C0090B2C8 /* CourtFilterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED791C01814AB0C0090B2C8 /* CourtFilterTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		3E619BE0180A989900EA3EEB /* FlipSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipSegue.m; sourceTree = "<group>"; };
 		3E619BE3180A9E4500EA3EEB /* TennisCourtMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TennisCourtMapViewController.h; sourceTree = "<group>"; };
 		3E619BE4180A9E4500EA3EEB /* TennisCourtMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TennisCourtMapViewController.m; sourceTree = "<group>"; };
+		3ED791BF1814AB0C0090B2C8 /* CourtFilterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourtFilterTableViewController.h; sourceTree = "<group>"; };
+		3ED791C01814AB0C0090B2C8 /* CourtFilterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourtFilterTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				3E3B070F1800F0460006EB79 /* Main.storyboard */,
 				3E3B07151800F0460006EB79 /* Images.xcassets */,
 				3E3B07041800F0460006EB79 /* Supporting Files */,
+				3ED791BF1814AB0C0090B2C8 /* CourtFilterTableViewController.h */,
+				3ED791C01814AB0C0090B2C8 /* CourtFilterTableViewController.m */,
 			);
 			path = tennismatch;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			files = (
 				3E619BDE180A7A0100EA3EEB /* TennisCourtTableViewController.m in Sources */,
 				3E3B070E1800F0460006EB79 /* AppDelegate.m in Sources */,
+				3ED791C11814AB0C0090B2C8 /* CourtFilterTableViewController.m in Sources */,
 				3E619BE1180A989900EA3EEB /* FlipSegue.m in Sources */,
 				3E3B070A1800F0460006EB79 /* main.m in Sources */,
 				3E619BE5180A9E4500EA3EEB /* TennisCourtMapViewController.m in Sources */,
