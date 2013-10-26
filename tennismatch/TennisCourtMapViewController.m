@@ -14,19 +14,15 @@
 
 @implementation TennisCourtMapViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSLog(@"in the viewDidLoad method");
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,5 +46,16 @@
     }
     
     [super viewWillDisappear:animated];
+}
+
+//DELEGATE METHODS FOR THE VIEW LOCATION MANAGER
+-(void)locationManager:(CLLocationManager *)manager
+     didUpdateLocation:(CLLocation *)newLocation
+          fromLocation:(CLLocation *)oldLocation{
+    NSLog(@"%@", newLocation);
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"Could not find location: %@", error);
 }
 @end

@@ -15,15 +15,19 @@
 @implementation CourtFilterTableViewController
 
 - (IBAction)toggleOffLightsSwitch:(id)sender{
+    NSLog(@"toggle the light switch");
     
 }
 - (IBAction)toggleOffPrivateSwitch:(id)sender{
+    NSLog(@"toggle the private switch");
     
 }
 - (IBAction)toggleOffIndoorSwitch:(id)sender{
+    NSLog(@"toggle the indoor switch");
     
 }
 - (IBAction)toggleOffHardSwitch:(id)sender{
+    NSLog(@"toggle the hard switch");
     
 }
 - (IBAction)toggleOffClaySwitch:(id)sender{
@@ -33,21 +37,6 @@
     
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 2;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 3;
-}
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -79,9 +68,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
