@@ -24,6 +24,7 @@
 		3E619BE1180A989900EA3EEB /* FlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BE0180A989900EA3EEB /* FlipSegue.m */; };
 		3E619BE5180A9E4500EA3EEB /* TennisCourtMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BE4180A9E4500EA3EEB /* TennisCourtMapViewController.m */; };
 		3ED791C11814AB0C0090B2C8 /* CourtFilterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED791C01814AB0C0090B2C8 /* CourtFilterTableViewController.m */; };
+		3ED9E76D181CEDA300D28581 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED9E76C181CEDA300D28581 /* MapKit.framework */; };
 		3EF9FEF9181A542500A8E13A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF9FEF8181A542500A8E13A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		3E619BE4180A9E4500EA3EEB /* TennisCourtMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TennisCourtMapViewController.m; sourceTree = "<group>"; };
 		3ED791BF1814AB0C0090B2C8 /* CourtFilterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourtFilterTableViewController.h; sourceTree = "<group>"; };
 		3ED791C01814AB0C0090B2C8 /* CourtFilterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourtFilterTableViewController.m; sourceTree = "<group>"; };
+		3ED9E76C181CEDA300D28581 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3EF9FEF8181A542500A8E13A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED9E76D181CEDA300D28581 /* MapKit.framework in Frameworks */,
 				3EF9FEF9181A542500A8E13A /* CoreLocation.framework in Frameworks */,
 				3E3B07001800F0460006EB79 /* CoreGraphics.framework in Frameworks */,
 				3E3B07021800F0460006EB79 /* UIKit.framework in Frameworks */,
@@ -113,6 +116,7 @@
 		3E3B06FC1800F0460006EB79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3ED9E76C181CEDA300D28581 /* MapKit.framework */,
 				3EF9FEF8181A542500A8E13A /* CoreLocation.framework */,
 				3E3B06FD1800F0460006EB79 /* Foundation.framework */,
 				3E3B06FF1800F0460006EB79 /* CoreGraphics.framework */,

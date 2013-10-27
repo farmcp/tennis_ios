@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface TennisCourtMapViewController : UIViewController
+@interface TennisCourtMapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 {
     CLLocationManager *locationManager;
+    
+    IBOutlet MKMapView *worldView;
+    IBOutlet UIActivityIndicatorView *activityIndicator;
 }
 @end

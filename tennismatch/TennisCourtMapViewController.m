@@ -18,11 +18,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"in the viewDidLoad method");
     locationManager = [[CLLocationManager alloc] init];
     [locationManager setDelegate:self];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    [locationManager startUpdatingLocation];
+    
+    //show the user in the MKMapView
+    [worldView setShowsUserLocation:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,14 +49,28 @@
     [super viewWillDisappear:animated];
 }
 
-//DELEGATE METHODS FOR THE VIEW LOCATION MANAGER
+//CLLOCATIONMANAGER DELEGATE METHODS FOR THE VIEW LOCATION MANAGER
 -(void)locationManager:(CLLocationManager *)manager
-     didUpdateLocation:(CLLocation *)newLocation
+     didUpdateToLocation:(CLLocation *)newLocation
           fromLocation:(CLLocation *)oldLocation{
     NSLog(@"%@", newLocation);
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
     NSLog(@"Could not find location: %@", error);
+}
+
+//MKMAPVIEW DELEGATE
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+    //method is called when the user location is found - now need to zoom into the location
+    CLLocationCoordinate2D location = [userLocation coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, 500, 500);
+    [worldView setRegion:region];
+}
+
+
+
+- (void)dealloc{
+    [locationManager setDelegate:nil];
 }
 @end
