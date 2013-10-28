@@ -11,18 +11,22 @@
 @interface CourtFilterTableViewController : UITableViewController{
     IBOutlet UISwitch *lightsSwitch;
     IBOutlet UISwitch *privateSwitch;
+    IBOutlet UISwitch *publicSwitch;
     IBOutlet UISwitch *indoorSwitch;
+    IBOutlet UISwitch *outdoorSwitch;
     IBOutlet UISwitch *hardCourtSwitch;
     IBOutlet UISwitch *clayCourtSwitch;
     IBOutlet UISwitch *grassCourtSwitch;
 }
 
-- (IBAction)toggleOffLightsSwitch:(id)sender;
-- (IBAction)toggleOffPrivateSwitch:(id)sender;
-- (IBAction)toggleOffIndoorSwitch:(id)sender;
-- (IBAction)toggleOffHardSwitch:(id)sender;
-- (IBAction)toggleOffClaySwitch:(id)sender;
-- (IBAction)toggleOffGrassSwitch:(id)sender;
+- (IBAction)toggleLightsSwitch:(id)sender;
+- (IBAction)togglePrivateSwitch:(id)sender;
+- (IBAction)togglePublicSwitch:(id)sender;
+- (IBAction)toggleIndoorSwitch:(id)sender;
+- (IBAction)toggleOutdoorSwitch:(id)sender;
+- (IBAction)toggleHardSwitch:(id)sender;
+- (IBAction)toggleClaySwitch:(id)sender;
+- (IBAction)toggleGrassSwitch:(id)sender;
 
 
 @end

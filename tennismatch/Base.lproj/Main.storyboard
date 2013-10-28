@@ -71,7 +71,7 @@
                                                     <rect key="frame" x="251" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="toggleOffLightsSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="E88-cR-dc6"/>
+                                                        <action selector="toggleLightsSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="cOU-Ye-4iK"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -94,7 +94,7 @@
                                                     <rect key="frame" x="251" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="toggleOffPrivateSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="zj1-BS-bT2"/>
+                                                        <action selector="togglePrivateSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="M09-om-t5m"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -107,7 +107,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Indoor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2o-M3-L4d">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Public" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2o-M3-L4d">
+                                                    <rect key="frame" x="20" y="11" width="48" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mif-hI-cZ5">
+                                                    <rect key="frame" x="251" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="togglePublicSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="Q4z-ca-Uyj"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mrl-ew-IOy">
+                                        <rect key="frame" x="0.0" y="187" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mrl-ew-IOy" id="EVe-qz-i2y">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Indoor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CT-AK-lW2">
                                                     <rect key="frame" x="20" y="11" width="50" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -117,7 +140,30 @@
                                                     <rect key="frame" x="251" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="toggleOffIndoorSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="N47-d3-EjB"/>
+                                                        <action selector="toggleIndoorSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="IXm-M4-T2n"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RKm-FZ-aqW">
+                                        <rect key="frame" x="0.0" y="231" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RKm-FZ-aqW" id="0Xk-DV-yF6">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Outdoor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAI-Sj-YlY">
+                                                    <rect key="frame" x="20" y="11" width="64" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ra3-9a-02W">
+                                                    <rect key="frame" x="251" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="toggleOutdoorSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="UTg-l3-hai"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -128,7 +174,7 @@
                             <tableViewSection headerTitle="Surface Types" footerTitle="Leave these on to include them in court searches!" id="XHl-1m-n3P">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="M6f-NE-g5k">
-                                        <rect key="frame" x="0.0" y="235" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="323" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M6f-NE-g5k" id="PKp-oh-7ab">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -144,14 +190,14 @@
                                                     <rect key="frame" x="251" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="toggleOffHardSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="wPh-xa-Ixh"/>
+                                                        <action selector="toggleHardSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="7LQ-OM-ZWp"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Riw-fr-4LJ">
-                                        <rect key="frame" x="0.0" y="279" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="367" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Riw-fr-4LJ" id="wYH-2M-emf">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -167,14 +213,14 @@
                                                     <rect key="frame" x="251" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="toggleOffClaySwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="Vq5-lB-dJJ"/>
+                                                        <action selector="toggleClaySwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="9tS-Ez-sie"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xmO-0D-iNh">
-                                        <rect key="frame" x="0.0" y="323" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="411" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xmO-0D-iNh" id="1jx-RE-1xv">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -190,7 +236,7 @@
                                                     <rect key="frame" x="251" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="toggleOffGrassSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="1zS-YL-SGE"/>
+                                                        <action selector="toggleGrassSwitch:" destination="nQp-lx-Ceu" eventType="touchUpInside" id="uaM-uK-9lp"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -211,7 +257,9 @@
                         <outlet property="hardCourtSwitch" destination="Ujk-pD-BGd" id="0GJ-ny-sre"/>
                         <outlet property="indoorSwitch" destination="zcZ-vV-LGm" id="ohe-AP-ogd"/>
                         <outlet property="lightsSwitch" destination="yQe-ly-sPT" id="job-OM-ZXL"/>
+                        <outlet property="outdoorSwitch" destination="ra3-9a-02W" id="Igm-lM-eIR"/>
                         <outlet property="privateSwitch" destination="zco-p7-fPb" id="z91-zD-quh"/>
+                        <outlet property="publicSwitch" destination="Mif-hI-cZ5" id="4Jy-19-7G1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kto-5Z-hpF" userLabel="First Responder" sceneMemberID="firstResponder"/>

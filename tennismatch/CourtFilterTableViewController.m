@@ -14,27 +14,44 @@
 
 @implementation CourtFilterTableViewController
 
-- (IBAction)toggleOffLightsSwitch:(id)sender{
-    NSLog(@"toggle the light switch");
-    
+- (IBAction)toggleLightsSwitch:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setBool:lightsSwitch.isOn
+                                            forKey:@"lights"];
 }
-- (IBAction)toggleOffPrivateSwitch:(id)sender{
-    NSLog(@"toggle the private switch");
-    
+
+- (IBAction)togglePrivateSwitch:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setBool:privateSwitch.isOn
+                                            forKey:@"private"];
 }
-- (IBAction)toggleOffIndoorSwitch:(id)sender{
-    NSLog(@"toggle the indoor switch");
-    
+
+- (IBAction)togglePublicSwitch:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setBool:publicSwitch.isOn
+                                            forKey:@"public"];
 }
-- (IBAction)toggleOffHardSwitch:(id)sender{
-    NSLog(@"toggle the hard switch");
-    
+
+- (IBAction)toggleIndoorSwitch:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setBool:indoorSwitch.isOn
+                                            forKey:@"indoor"];
 }
-- (IBAction)toggleOffClaySwitch:(id)sender{
-    
+
+- (IBAction)toggleOutdoorSwitch:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setBool:outdoorSwitch.isOn
+                                            forKey:@"outdoor"];
 }
-- (IBAction)toggleOffGrassSwitch:(id)sender{
-    
+
+- (IBAction)toggleHardSwitch:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setBool:hardCourtSwitch.isOn
+                                            forKey:@"hardCourt"];
+}
+
+- (IBAction)toggleClaySwitch:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setBool:clayCourtSwitch.isOn
+                                            forKey:@"clayCourt"];
+}
+
+- (IBAction)toggleGrassSwitch:(id)sender{
+    [[NSUserDefaults standardUserDefaults] setBool:grassCourtSwitch.isOn
+                                            forKey:@"grassCourt"];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -49,12 +66,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    //SET THE USER DEFAULTS - if the default is set to 0 then turn off
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"lights"]  == 0){
+        [lightsSwitch setOn:NO];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"private"] == 0) {
+        [privateSwitch setOn:NO];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"public"] == 0) {
+        [publicSwitch setOn:NO];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"indoor"] == 0) {
+        [indoorSwitch setOn:NO];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"outdoor"] == 0) {
+        [outdoorSwitch setOn:NO];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hardCourt"] == 0) {
+        [hardCourtSwitch setOn:NO];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"clayCourt"] == 0) {
+        [clayCourtSwitch setOn:NO];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"grassCourt"] == 0) {
+        [grassCourtSwitch setOn:NO];
+    }
+    
+    //NSLog(@"%hhd, %hhd, %hhd", [[NSUserDefaults standardUserDefaults] boolForKey:@"lights"], [[NSUserDefaults standardUserDefaults] boolForKey:@"private"], [[NSUserDefaults standardUserDefaults] boolForKey:@"public"]);
 }
 
 - (void)didReceiveMemoryWarning
