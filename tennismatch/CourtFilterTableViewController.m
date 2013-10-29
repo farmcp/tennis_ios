@@ -66,9 +66,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //SET THE USER DEFAULTS - if the default is set to 0 then turn off
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"lights"]  == 0){
+
+    //SET THE USER DEFAULTS - if the default is set to 0 then turn off. We use registerDefaults: in AppDelegate to make the default for all switches YES
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"lights"] == 0){
         [lightsSwitch setOn:NO];
     }
     
