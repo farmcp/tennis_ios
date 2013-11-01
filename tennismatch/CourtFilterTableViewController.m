@@ -15,43 +15,51 @@
 @implementation CourtFilterTableViewController
 
 - (IBAction)toggleLightsSwitch:(id)sender{
-    [[NSUserDefaults standardUserDefaults] setBool:lightsSwitch.isOn
-                                            forKey:@"lights"];
+    BOOL isOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"lights"];
+    isOn = !isOn; //toggle
+    [[NSUserDefaults standardUserDefaults] setBool:isOn forKey:@"lights"];
 }
 
 - (IBAction)togglePrivateSwitch:(id)sender{
-    [[NSUserDefaults standardUserDefaults] setBool:privateSwitch.isOn
-                                            forKey:@"private"];
+    BOOL isOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"private"];
+    isOn = !isOn; //toggle
+    [[NSUserDefaults standardUserDefaults] setBool:isOn forKey:@"private"];
 }
 
 - (IBAction)togglePublicSwitch:(id)sender{
-    [[NSUserDefaults standardUserDefaults] setBool:publicSwitch.isOn
-                                            forKey:@"public"];
+    BOOL isOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"public"];
+    isOn = !isOn; //toggle
+    [[NSUserDefaults standardUserDefaults] setBool:isOn forKey:@"public"];
 }
 
 - (IBAction)toggleIndoorSwitch:(id)sender{
-    [[NSUserDefaults standardUserDefaults] setBool:indoorSwitch.isOn
-                                            forKey:@"indoor"];
+    BOOL isOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"indoor"];
+    isOn = !isOn; //toggle
+    [[NSUserDefaults standardUserDefaults] setBool:isOn forKey:@"indoor"];
 }
 
 - (IBAction)toggleOutdoorSwitch:(id)sender{
-    [[NSUserDefaults standardUserDefaults] setBool:outdoorSwitch.isOn
-                                            forKey:@"outdoor"];
+    BOOL isOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"outdoor"];
+    isOn = !isOn; //toggle
+    [[NSUserDefaults standardUserDefaults] setBool:isOn forKey:@"outdoor"];
 }
 
 - (IBAction)toggleHardSwitch:(id)sender{
-    [[NSUserDefaults standardUserDefaults] setBool:hardCourtSwitch.isOn
-                                            forKey:@"hardCourt"];
+    BOOL isOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"hardCourt"];
+    isOn = !isOn; //toggle
+    [[NSUserDefaults standardUserDefaults] setBool:isOn forKey:@"hardCourt"];
 }
 
 - (IBAction)toggleClaySwitch:(id)sender{
-    [[NSUserDefaults standardUserDefaults] setBool:clayCourtSwitch.isOn
-                                            forKey:@"clayCourt"];
+    BOOL isOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"clayCourt"];
+    isOn = !isOn; //toggle
+    [[NSUserDefaults standardUserDefaults] setBool:isOn forKey:@"clayCourt"];
 }
 
 - (IBAction)toggleGrassSwitch:(id)sender{
-    [[NSUserDefaults standardUserDefaults] setBool:grassCourtSwitch.isOn
-                                            forKey:@"grassCourt"];
+    BOOL isOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"grassCourt"];
+    isOn = !isOn; //toggle
+    [[NSUserDefaults standardUserDefaults] setBool:isOn forKey:@"grassCourt"];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -67,40 +75,15 @@
 {
     [super viewDidLoad];
 
-    //SET THE USER DEFAULTS - if the default is set to 0 then turn off. We use registerDefaults: in AppDelegate to make the default for all switches YES
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"lights"] == 0){
-        [lightsSwitch setOn:NO];
-    }
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"private"] == 0) {
-        [privateSwitch setOn:NO];
-    }
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"public"] == 0) {
-        [publicSwitch setOn:NO];
-    }
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"indoor"] == 0) {
-        [indoorSwitch setOn:NO];
-    }
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"outdoor"] == 0) {
-        [outdoorSwitch setOn:NO];
-    }
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hardCourt"] == 0) {
-        [hardCourtSwitch setOn:NO];
-    }
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"clayCourt"] == 0) {
-        [clayCourtSwitch setOn:NO];
-    }
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"grassCourt"] == 0) {
-        [grassCourtSwitch setOn:NO];
-    }
-    
-    //NSLog(@"%hhd, %hhd, %hhd", [[NSUserDefaults standardUserDefaults] boolForKey:@"lights"], [[NSUserDefaults standardUserDefaults] boolForKey:@"private"], [[NSUserDefaults standardUserDefaults] boolForKey:@"public"]);
+    //SET THE USER DEFAULTS TO THEIR PROPER SWITCH POSITION
+    lightsSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"lights"];
+    privateSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"private"];
+    publicSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"public"];
+    indoorSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"indoor"];
+    outdoorSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"outdoor"];
+    hardCourtSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"hardCourt"];
+    clayCourtSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"clayCourt"];
+    grassCourtSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"grassCourt"];
 }
 
 - (void)didReceiveMemoryWarning
