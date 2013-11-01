@@ -14,19 +14,16 @@
 
 @implementation TennisCourtMapViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    //show the user in the MKMapView
+    [worldView setShowsUserLocation:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,5 +47,30 @@
     }
     
     [super viewWillDisappear:animated];
+}
+
+//CLLOCATIONMANAGER DELEGATE METHODS FOR THE VIEW LOCATION MANAGER
+-(void)locationManager:(CLLocationManager *)manager
+     didUpdateToLocation:(CLLocation *)newLocation
+          fromLocation:(CLLocation *)oldLocation{
+    NSLog(@"%@", newLocation);
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"Could not find location: %@", error);
+}
+
+//MKMAPVIEW DELEGATE
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+    //method is called when the user location is found - now need to zoom into the location
+    CLLocationCoordinate2D location = [userLocation coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, 500, 500);
+    [worldView setRegion:region];
+}
+
+
+
+- (void)dealloc{
+    [locationManager setDelegate:nil];
 }
 @end

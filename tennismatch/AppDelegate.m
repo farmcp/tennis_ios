@@ -14,6 +14,20 @@
 {
     //Set the header color
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    //Set the NSUserDefaults for the first time user
+    NSDictionary *defaults = @{
+        @"lights":@YES,
+        @"private":@YES,
+        @"public":@YES,
+        @"indoor":@YES,
+        @"outdoor":@YES,
+        @"hardCourt": @YES,
+        @"clayCourt":@YES,
+        @"grassCourt":@YES
+        };
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+    
     // Override point for customization after application launch.
     return YES;
 }
