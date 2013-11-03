@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "FlipSegue.h"
+#import "LocationController.h"
 
 @interface TennisCourtTableViewController : UITableViewController
+{
+    CLLocationManager *locationManager;
+}
 
 -(IBAction)mapViewButtonClick:(UIButton*)sender;
 -(IBAction)filterButtonClick:(UIButton *)sender;

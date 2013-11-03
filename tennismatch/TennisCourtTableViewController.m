@@ -38,12 +38,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *url = @"http://www.tennismatch.us/api/v0/facilities?";
+    NSString *latitude;
+    NSString *longitude;
+    
+    locationManager = [[LocationController sharedLocationController] locationManager];
+    [locationManager startUpdatingLocation];
+    
+    latitude = [NSString stringWithFormat:@"%f", locationManager.location.coordinate.latitude];
+    longitude = [NSString stringWithFormat:@"%f", locationManager.location.coordinate.longitude];
+    
+    NSArray *myStrings = [[NSArray alloc] initWithObjects:url,@"lat=",latitude, @"&long=",longitude, nil];
+    NSString *fullURL = [myStrings componentsJoinedByString:@""];
+    NSLog(fullURL);
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]];
+    NSURLResponse *resp = nil;
+    NSError *err = nil;
+    
+    NSData *response = [NSURLConnection sendSynchronousRequest: request returningResponse: &resp error: &err];
+    NSString * theString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    NSLog(@"response: %@", theString);
+    
+    
+//    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,14 +81,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }
@@ -79,45 +102,6 @@
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -128,5 +112,9 @@
 }
 
  */
+
+//-(void) dealloc{
+//    [locationManager setDelegate:nil];
+//}
 
 @end
