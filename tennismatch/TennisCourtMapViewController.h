@@ -10,7 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface TennisCourtMapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+#import "LocationController.h"
+
+@interface TennisCourtMapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 {
     CLLocationManager *locationManager;
     
