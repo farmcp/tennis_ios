@@ -14,6 +14,10 @@
 {
     //Set the header color
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
+    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"glyphicons_020_home.png"]];
+    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"glyphicons_020_home.png"]];
+
     
     //Set the NSUserDefaults for the first time user
     NSDictionary *defaults = @{

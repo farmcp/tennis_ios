@@ -26,7 +26,7 @@
         <scene sceneID="dK5-pl-VYP">
             <objects>
                 <navigationController definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="ch3-Xa-UoI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tennis Courts" id="6vA-E0-8gg"/>
+                    <tabBarItem key="tabBarItem" title="Tennis Courts" image="glyphicons_266_flag.png" id="6vA-E0-8gg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="r03-9d-jyJ">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -35,6 +35,10 @@
                             <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                         </textAttributes>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dPd-fh-XIQ">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Jca-JN-yEf" kind="relationship" relationship="rootViewController" id="wkP-Q3-F4F"/>
                     </connections>
@@ -308,16 +312,16 @@
                             <outlet property="delegate" destination="Jca-JN-yEf" id="H8U-Br-R3L"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tennis Courts" id="EAc-Ow-F8C">
-                        <barButtonItem key="backBarButtonItem" title="List" id="Yrl-9g-k9K" userLabel="Back - List View"/>
-                        <barButtonItem key="leftBarButtonItem" title="Filter" id="4TF-0i-sjO" userLabel="Filter">
+                    <navigationItem key="navigationItem" title="Tennismatch" id="EAc-Ow-F8C">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Qqa-Rq-6PJ"/>
+                        <barButtonItem key="leftBarButtonItem" image="glyphicons_137_cogwheels.png" id="4TF-0i-sjO" userLabel="Filter">
                             <color key="tintColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                             <connections>
                                 <action selector="filterButtonClick:" destination="Jca-JN-yEf" id="A7P-FM-FCu"/>
                                 <segue destination="nQp-lx-Ceu" kind="push" id="zGn-Hs-4wr"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Map" id="qgs-UP-f8u" userLabel="Map View">
+                        <barButtonItem key="rightBarButtonItem" image="glyphicons_242_google_maps.png" id="qgs-UP-f8u" userLabel="Map View">
                             <color key="tintColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                             <connections>
                                 <action selector="mapViewButtonClick:" destination="Jca-JN-yEf" id="bbO-cL-QjQ"/>
@@ -389,7 +393,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0LD-Pn-WiA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="-9" width="320" height="577"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="qUt-6M-ZeG" id="Obw-Nu-IhF"/>
@@ -402,7 +406,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map View" id="mn2-CK-3Sv"/>
+                    <navigationItem key="navigationItem" title="Map" id="mn2-CK-3Sv"/>
                     <connections>
                         <outlet property="activityIndicator" destination="avr-Qd-5SI" id="9i1-a9-c7S"/>
                         <outlet property="worldView" destination="0LD-Pn-WiA" id="dow-ue-Zhw"/>
@@ -413,6 +417,11 @@
             <point key="canvasLocation" x="1332" y="-22"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="glyphicons_137_cogwheels.png" width="34" height="27"/>
+        <image name="glyphicons_242_google_maps.png" width="16" height="24"/>
+        <image name="glyphicons_266_flag.png" width="21" height="26"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

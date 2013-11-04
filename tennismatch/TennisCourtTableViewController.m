@@ -30,6 +30,7 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
+
     if (self) {
         // Custom initialization
     }
@@ -40,6 +41,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iphoneheader.png"]];
+
     NSString *url = @"http://www.tennismatch.us/api/v0/facilities?";
     NSString *latitude;
     NSString *longitude;
