@@ -12,6 +12,7 @@
 
 @interface TennisCourtTableViewController : UITableViewController{
     CLLocationManager *locationManager;
+    NSArray *facilities;
 }
 
 @property(nonatomic) int rowcount;

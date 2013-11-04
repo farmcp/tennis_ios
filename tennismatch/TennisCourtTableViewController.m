@@ -60,6 +60,8 @@
     NSData *response = [NSURLConnection sendSynchronousRequest: request returningResponse: &resp error: &err];
 
     NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+    facilities = [jsonDictionary objectForKey:@"facilities"];
+    NSLog(@"%@", [[[facilities firstObject] objectForKey:@"facility"] objectForKey:@"name"]);
     rowcount = [[jsonDictionary objectForKey:@"facilities"] count];
     NSLog(@"%@", [jsonDictionary objectForKey:@"facilities"]);
     
@@ -99,8 +101,8 @@
 {
     static NSString *CellIdentifier = @"courtCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-
-    cell.textLabel.text = @"hello";
+//    NSLog(@"%@", [facilities objectForKey:@"facility"]);
+    cell.textLabel.text = [[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"name"];
     cell.detailTextLabel.text = @"hello there";
     
     return cell;
