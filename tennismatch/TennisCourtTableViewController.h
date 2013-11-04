@@ -10,10 +10,11 @@
 #import "FlipSegue.h"
 #import "LocationController.h"
 
-@interface TennisCourtTableViewController : UITableViewController
-{
+@interface TennisCourtTableViewController : UITableViewController{
     CLLocationManager *locationManager;
 }
+
+@property(nonatomic) int rowcount;
 
 -(IBAction)mapViewButtonClick:(UIButton*)sender;
 -(IBAction)filterButtonClick:(UIButton *)sender;
