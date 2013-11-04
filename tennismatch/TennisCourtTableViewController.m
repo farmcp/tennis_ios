@@ -13,6 +13,7 @@
 @end
 
 @implementation TennisCourtTableViewController
+@synthesize rowcount;
 
 -(IBAction)mapViewButtonClick:(UIButton *)sender
 {
@@ -29,6 +30,7 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
+
     if (self) {
         // Custom initialization
     }
@@ -39,6 +41,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iphoneheader.png"]];
+
     NSString *url = @"http://www.tennismatch.us/api/v0/facilities?";
     NSString *latitude;
     NSString *longitude;
@@ -51,17 +55,20 @@
     
     NSArray *myStrings = [[NSArray alloc] initWithObjects:url,@"lat=",latitude, @"&long=",longitude, nil];
     NSString *fullURL = [myStrings componentsJoinedByString:@""];
-    NSLog(fullURL);
+    NSLog(@"%@", fullURL);
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]];
     NSURLResponse *resp = nil;
     NSError *err = nil;
     
     NSData *response = [NSURLConnection sendSynchronousRequest: request returningResponse: &resp error: &err];
-    NSString * theString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-    NSLog(@"response: %@", theString);
+
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+    facilities = [jsonDictionary objectForKey:@"facilities"];
+    NSLog(@"%@", [[[facilities firstObject] objectForKey:@"facility"] objectForKey:@"name"]);
+    rowcount = [[jsonDictionary objectForKey:@"facilities"] count];
+    NSLog(@"%@", [jsonDictionary objectForKey:@"facilities"]);
     
-    
-//    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
+//  NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -82,21 +89,24 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    NSLog(@"running section count");
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    NSLog(@"running count for rows: %d", rowcount);
+    return rowcount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"courtCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
+//    NSLog(@"%@", [facilities objectForKey:@"facility"]);
+    cell.textLabel.text = [[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"name"];
+    cell.detailTextLabel.text = @"hello there";
     
     return cell;
 }

@@ -19,4 +19,5 @@
     IBOutlet MKMapView *worldView;
     IBOutlet UIActivityIndicatorView *activityIndicator;
 }
+
 @end
