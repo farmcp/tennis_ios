@@ -1,26 +1,23 @@
-
 //
-//  FlipSegue.m
+//  BottomUpSegue.m
 //  tennismatch
 //
-//  Created by Christopher Farm on 10/13/13.
+//  Created by Christopher Farm on 11/5/13.
 //  Copyright (c) 2013 com.ordinance. All rights reserved.
 //
 
-#import "FlipSegue.h"
+#import "BottomUpSegue.h"
 
-@implementation FlipSegue
-
--(void) perform{
+@implementation BottomUpSegue
+- (void) perform{
     
     UIViewController *src = (UIViewController *) self.sourceViewController;
     UIViewController *dst = (UIViewController *) self.destinationViewController;
     [UIView transitionWithView:src.navigationController.view duration:1.0
-                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                       options:UIViewAnimationOptionTransitionCurlUp
                     animations:^{
                         [src.navigationController pushViewController:dst animated:NO];
                     }
                     completion:NULL];
 }
-
 @end

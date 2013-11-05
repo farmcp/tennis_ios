@@ -104,6 +104,22 @@
     return cell;
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // back button was pressed.  We know this is true because self is no longer
+        // in the navigation stack.
+        CATransition *transition = [CATransition animation];
+        [transition setDuration:1.0];
+        [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+        [transition setType:@"pageUnCurl"];
+        [transition setSubtype:kCATransitionFromBottom];
+        [transition setDelegate:self];
+        [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    }
+    
+    [super viewWillDisappear:animated];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
