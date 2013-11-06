@@ -41,7 +41,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iphoneheader.png"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tennisheader.png"]];
 
     NSString *url = @"http://www.tennismatch.us/api/v0/facilities?";
     NSString *latitude;
