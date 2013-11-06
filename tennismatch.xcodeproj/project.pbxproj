@@ -25,6 +25,8 @@
 		3E619BDE180A7A0100EA3EEB /* TennisCourtTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BDD180A7A0100EA3EEB /* TennisCourtTableViewController.m */; };
 		3E619BE1180A989900EA3EEB /* FlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BE0180A989900EA3EEB /* FlipSegue.m */; };
 		3E619BE5180A9E4500EA3EEB /* TennisCourtMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BE4180A9E4500EA3EEB /* TennisCourtMapViewController.m */; };
+		3E878651182A3AD200B92FCC /* tennisheader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E87864F182A3AD200B92FCC /* tennisheader@2x.png */; };
+		3E878653182A3B7E00B92FCC /* tennisheader.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E878652182A3B7E00B92FCC /* tennisheader.png */; };
 		3EB3DB7C18278EC3005DE529 /* glyphicons_137_cogwheels.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB3DB7A18278EC3005DE529 /* glyphicons_137_cogwheels.png */; };
 		3EB3DB7D18278EC3005DE529 /* glyphicons_137_cogwheels@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB3DB7B18278EC3005DE529 /* glyphicons_137_cogwheels@2x.png */; };
 		3EB3DB80182790C2005DE529 /* glyphicons_242_google_maps.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB3DB7E182790C2005DE529 /* glyphicons_242_google_maps.png */; };
@@ -33,8 +35,6 @@
 		3EB3DB85182791B7005DE529 /* glyphicons_020_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB3DB83182791B7005DE529 /* glyphicons_020_home@2x.png */; };
 		3EB3DB88182795FC005DE529 /* glyphicons_266_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB3DB86182795FC005DE529 /* glyphicons_266_flag.png */; };
 		3EB3DB89182795FC005DE529 /* glyphicons_266_flag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB3DB87182795FC005DE529 /* glyphicons_266_flag@2x.png */; };
-		3EB3DB8E18279FFF005DE529 /* iphoneheader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB3DB8C18279FFF005DE529 /* iphoneheader@2x.png */; };
-		3EB3DB8F18279FFF005DE529 /* iphoneheader.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB3DB8D18279FFF005DE529 /* iphoneheader.png */; };
 		3ED791C11814AB0C0090B2C8 /* CourtFilterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED791C01814AB0C0090B2C8 /* CourtFilterTableViewController.m */; };
 		3ED9E76D181CEDA300D28581 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED9E76C181CEDA300D28581 /* MapKit.framework */; };
 		3EF9FEF9181A542500A8E13A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF9FEF8181A542500A8E13A /* CoreLocation.framework */; };
@@ -78,6 +78,8 @@
 		3E619BE0180A989900EA3EEB /* FlipSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipSegue.m; sourceTree = "<group>"; };
 		3E619BE3180A9E4500EA3EEB /* TennisCourtMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TennisCourtMapViewController.h; sourceTree = "<group>"; };
 		3E619BE4180A9E4500EA3EEB /* TennisCourtMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TennisCourtMapViewController.m; sourceTree = "<group>"; };
+		3E87864F182A3AD200B92FCC /* tennisheader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tennisheader@2x.png"; sourceTree = "<group>"; };
+		3E878652182A3B7E00B92FCC /* tennisheader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tennisheader.png; sourceTree = "<group>"; };
 		3EB3DB7A18278EC3005DE529 /* glyphicons_137_cogwheels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_137_cogwheels.png; sourceTree = "<group>"; };
 		3EB3DB7B18278EC3005DE529 /* glyphicons_137_cogwheels@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_137_cogwheels@2x.png"; sourceTree = "<group>"; };
 		3EB3DB7E182790C2005DE529 /* glyphicons_242_google_maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_242_google_maps.png; sourceTree = "<group>"; };
@@ -86,8 +88,6 @@
 		3EB3DB83182791B7005DE529 /* glyphicons_020_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_020_home@2x.png"; sourceTree = "<group>"; };
 		3EB3DB86182795FC005DE529 /* glyphicons_266_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_266_flag.png; sourceTree = "<group>"; };
 		3EB3DB87182795FC005DE529 /* glyphicons_266_flag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons_266_flag@2x.png"; sourceTree = "<group>"; };
-		3EB3DB8C18279FFF005DE529 /* iphoneheader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphoneheader@2x.png"; sourceTree = "<group>"; };
-		3EB3DB8D18279FFF005DE529 /* iphoneheader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneheader.png; sourceTree = "<group>"; };
 		3ED791BF1814AB0C0090B2C8 /* CourtFilterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourtFilterTableViewController.h; sourceTree = "<group>"; };
 		3ED791C01814AB0C0090B2C8 /* CourtFilterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourtFilterTableViewController.m; sourceTree = "<group>"; };
 		3ED9E76C181CEDA300D28581 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -225,8 +225,8 @@
 		3EB3DB7918278DBB005DE529 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				3EB3DB8C18279FFF005DE529 /* iphoneheader@2x.png */,
-				3EB3DB8D18279FFF005DE529 /* iphoneheader.png */,
+				3E878652182A3B7E00B92FCC /* tennisheader.png */,
+				3E87864F182A3AD200B92FCC /* tennisheader@2x.png */,
 				3EB3DB86182795FC005DE529 /* glyphicons_266_flag.png */,
 				3EB3DB87182795FC005DE529 /* glyphicons_266_flag@2x.png */,
 				3EB3DB82182791B7005DE529 /* glyphicons_020_home.png */,
@@ -318,14 +318,14 @@
 				3EB3DB7C18278EC3005DE529 /* glyphicons_137_cogwheels.png in Resources */,
 				3EB3DB85182791B7005DE529 /* glyphicons_020_home@2x.png in Resources */,
 				3E3B07161800F0460006EB79 /* Images.xcassets in Resources */,
+				3E878653182A3B7E00B92FCC /* tennisheader.png in Resources */,
 				3EB3DB84182791B7005DE529 /* glyphicons_020_home.png in Resources */,
-				3EB3DB8E18279FFF005DE529 /* iphoneheader@2x.png in Resources */,
 				3EB3DB81182790C2005DE529 /* glyphicons_242_google_maps@2x.png in Resources */,
 				3EB3DB80182790C2005DE529 /* glyphicons_242_google_maps.png in Resources */,
-				3EB3DB8F18279FFF005DE529 /* iphoneheader.png in Resources */,
 				3EB3DB88182795FC005DE529 /* glyphicons_266_flag.png in Resources */,
 				3E3B07081800F0460006EB79 /* InfoPlist.strings in Resources */,
 				3EB3DB89182795FC005DE529 /* glyphicons_266_flag@2x.png in Resources */,
+				3E878651182A3AD200B92FCC /* tennisheader@2x.png in Resources */,
 				3EB3DB7D18278EC3005DE529 /* glyphicons_137_cogwheels@2x.png in Resources */,
 				3E3B07111800F0460006EB79 /* Main.storyboard in Resources */,
 			);
