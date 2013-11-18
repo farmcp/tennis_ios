@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E0E2A7C1825A3BB008C3E21 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E2A7B1825A3BB008C3E21 /* LocationController.m */; };
 		3E37E21F1828E65F00D42E73 /* BottomUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E37E21E1828E65F00D42E73 /* BottomUpSegue.m */; };
+		3E3979A118399F8D00D6D35A /* default_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3979A018399F8D00D6D35A /* default_logo.png */; };
 		3E3B06FE1800F0460006EB79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B06FD1800F0460006EB79 /* Foundation.framework */; };
 		3E3B07001800F0460006EB79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B06FF1800F0460006EB79 /* CoreGraphics.framework */; };
 		3E3B07021800F0460006EB79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B07011800F0460006EB79 /* UIKit.framework */; };
@@ -55,6 +56,7 @@
 		3E0E2A7B1825A3BB008C3E21 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		3E37E21D1828E65F00D42E73 /* BottomUpSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomUpSegue.h; sourceTree = "<group>"; };
 		3E37E21E1828E65F00D42E73 /* BottomUpSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomUpSegue.m; sourceTree = "<group>"; };
+		3E3979A018399F8D00D6D35A /* default_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_logo.png; sourceTree = "<group>"; };
 		3E3B06FA1800F0460006EB79 /* Tennismatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tennismatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3B06FD1800F0460006EB79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E3B06FF1800F0460006EB79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E39799D1837050000D6D35A /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				3E0E2A7A1825A3BB008C3E21 /* LocationController.h */,
+				3E0E2A7B1825A3BB008C3E21 /* LocationController.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
 		3E3B06F11800F0460006EB79 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +166,7 @@
 		3E3B07031800F0460006EB79 /* tennismatch */ = {
 			isa = PBXGroup;
 			children = (
+				3E39799D1837050000D6D35A /* Singletons */,
 				3EB3DB7918278DBB005DE529 /* Images */,
 				3E619BE6180A9E4D00EA3EEB /* TennisCourtControllers */,
 				3E619BE2180A9DBF00EA3EEB /* Segues and Animations */,
@@ -163,8 +175,6 @@
 				3E3B070F1800F0460006EB79 /* Main.storyboard */,
 				3E3B07151800F0460006EB79 /* Images.xcassets */,
 				3E3B07041800F0460006EB79 /* Supporting Files */,
-				3E0E2A7A1825A3BB008C3E21 /* LocationController.h */,
-				3E0E2A7B1825A3BB008C3E21 /* LocationController.m */,
 			);
 			path = tennismatch;
 			sourceTree = "<group>";
@@ -225,6 +235,7 @@
 		3EB3DB7918278DBB005DE529 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3E3979A018399F8D00D6D35A /* default_logo.png */,
 				3E878652182A3B7E00B92FCC /* tennisheader.png */,
 				3E87864F182A3AD200B92FCC /* tennisheader@2x.png */,
 				3EB3DB86182795FC005DE529 /* glyphicons_266_flag.png */,
@@ -325,6 +336,7 @@
 				3EB3DB88182795FC005DE529 /* glyphicons_266_flag.png in Resources */,
 				3E3B07081800F0460006EB79 /* InfoPlist.strings in Resources */,
 				3EB3DB89182795FC005DE529 /* glyphicons_266_flag@2x.png in Resources */,
+				3E3979A118399F8D00D6D35A /* default_logo.png in Resources */,
 				3E878651182A3AD200B92FCC /* tennisheader@2x.png in Resources */,
 				3EB3DB7D18278EC3005DE529 /* glyphicons_137_cogwheels@2x.png in Resources */,
 				3E3B07111800F0460006EB79 /* Main.storyboard in Resources */,
