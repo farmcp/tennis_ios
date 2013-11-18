@@ -68,14 +68,6 @@
     rowcount = [[jsonDictionary objectForKey:@"facilities"] count];
     NSLog(@"%@", [jsonDictionary objectForKey:@"facilities"]);
     
-//  NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,14 +81,12 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    NSLog(@"running section count");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"running count for rows: %d", rowcount);
     return rowcount;
 }
 
@@ -104,9 +94,33 @@
 {
     static NSString *CellIdentifier = @"courtCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-//    NSLog(@"%@", [facilities objectForKey:@"facility"]);
-    cell.textLabel.text = [[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"name"];
-    cell.detailTextLabel.text = @"hello there";
+
+    //get the image url from the website api if it exists - else use the default
+    UIImageView *imv = (UIImageView *)[cell viewWithTag:100];
+    imv.layer.masksToBounds = YES;
+    imv.layer.cornerRadius = 10.0;
+    if([[[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"photos"] count] >= 1){
+        NSString *img_url = [[[[[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"photos"] objectAtIndex:0] objectForKey:@"photo"] objectForKey:@"url"];
+    
+        //Get image for the row if it exists
+        NSURL *photoURL = [NSURL URLWithString:img_url];
+        UIImage *photo = [UIImage imageWithData:[NSData dataWithContentsOfURL:photoURL]];
+        imv.image = photo;
+    }
+    
+    else{
+        UIImage *photo = [UIImage imageNamed:@"default_logo.png"];
+        imv.image = photo;
+    }
+    
+    //set the text label
+    UILabel *title_label = (UILabel *)[cell viewWithTag:101];
+    title_label.text = [[NSMutableString stringWithFormat: @"%d", indexPath.row + 1] stringByAppendingString:@". "];
+    title_label.text = [title_label.text stringByAppendingString:[[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"name"]];
+    UILabel *desc_label = (UILabel *)[cell viewWithTag:102];
+    NSMutableString *desc_text = [[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"street"];
+    desc_label.text = desc_text;
+    desc_label.text = [[desc_label.text stringByAppendingString:@" - "] stringByAppendingString:[[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"city"]];
     
     return cell;
 }
