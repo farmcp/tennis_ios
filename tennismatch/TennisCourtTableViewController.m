@@ -114,8 +114,13 @@
     }
     
     //set the text label
-    UILabel *lbl = (UILabel *)[cell viewWithTag:101];
-    lbl.text = [[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"name"];
+    UILabel *title_label = (UILabel *)[cell viewWithTag:101];
+    title_label.text = [[NSMutableString stringWithFormat: @"%d", indexPath.row + 1] stringByAppendingString:@". "];
+    title_label.text = [title_label.text stringByAppendingString:[[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"name"]];
+    UILabel *desc_label = (UILabel *)[cell viewWithTag:102];
+    NSMutableString *desc_text = [[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"street"];
+    desc_label.text = desc_text;
+    desc_label.text = [[desc_label.text stringByAppendingString:@" - "] stringByAppendingString:[[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"city"]];
     
     return cell;
 }
