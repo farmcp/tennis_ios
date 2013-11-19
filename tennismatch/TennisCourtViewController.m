@@ -30,6 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tennisheader.png"]];
+
 	// Do any additional setup after loading the view.
     courtNameLabel.text = name;
     courtStreetLabel.text = street;

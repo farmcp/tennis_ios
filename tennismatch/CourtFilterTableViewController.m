@@ -74,6 +74,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tennisheader.png"]];
+
 
     //SET THE USER DEFAULTS TO THEIR PROPER SWITCH POSITION
     lightsSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"lights"];
