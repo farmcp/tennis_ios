@@ -7,6 +7,7 @@
 //
 
 #import "TennisCourtTableViewController.h"
+#import "TennisCourtViewController.h"
 
 @interface TennisCourtTableViewController ()
 
@@ -46,28 +47,38 @@
     NSString *url = @"http://www.tennismatch.us/api/v0/facilities?";
     NSString *latitude;
     NSString *longitude;
+    facilities = nil;
     
     locationManager = [[LocationController sharedLocationController] locationManager];
-    [locationManager startUpdatingLocation];
-    
-    latitude = [NSString stringWithFormat:@"%f", locationManager.location.coordinate.latitude];
-    longitude = [NSString stringWithFormat:@"%f", locationManager.location.coordinate.longitude];
-    
-    NSArray *myStrings = [[NSArray alloc] initWithObjects:url,@"lat=",latitude, @"&long=",longitude, nil];
-    NSString *fullURL = [myStrings componentsJoinedByString:@""];
-    NSLog(@"%@", fullURL);
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]];
-    NSURLResponse *resp = nil;
-    NSError *err = nil;
-    
-    NSData *response = [NSURLConnection sendSynchronousRequest: request returningResponse: &resp error: &err];
+    if([locationManager locationServicesEnabled]){
+        [locationManager startUpdatingLocation];
+        
+        latitude = [NSString stringWithFormat:@"%f", locationManager.location.coordinate.latitude];
+        longitude = [NSString stringWithFormat:@"%f", locationManager.location.coordinate.longitude];
+        
+        NSArray *myStrings = [[NSArray alloc] initWithObjects:url,@"lat=",latitude, @"&long=",longitude, nil];
+        NSString *fullURL = [myStrings componentsJoinedByString:@""];
+        NSLog(@"%@", fullURL);
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]];
+        NSURLResponse *resp = nil;
+        NSError *err = nil;
+        
+        NSData *response = [NSURLConnection sendSynchronousRequest: request returningResponse: &resp error: &err];
+        
+        NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+        facilities = [jsonDictionary objectForKey:@"facilities"];
+        rowcount = [[jsonDictionary objectForKey:@"facilities"] count];
+    }
 
-    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
-    facilities = [jsonDictionary objectForKey:@"facilities"];
-    NSLog(@"%@", [[[facilities firstObject] objectForKey:@"facility"] objectForKey:@"name"]);
-    rowcount = [[jsonDictionary objectForKey:@"facilities"] count];
-    NSLog(@"%@", [jsonDictionary objectForKey:@"facilities"]);
-    
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"showTennisCourt"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        TennisCourtViewController *destinationVC = segue.destinationViewController;
+        [destinationVC setName:[[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"name"]];
+        [destinationVC setStreet:[[[facilities objectAtIndex:indexPath.row] objectForKey:@"facility"] objectForKey:@"street"]];
+    }
 }
 
 - (void)didReceiveMemoryWarning

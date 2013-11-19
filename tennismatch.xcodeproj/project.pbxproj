@@ -26,6 +26,7 @@
 		3E619BDE180A7A0100EA3EEB /* TennisCourtTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BDD180A7A0100EA3EEB /* TennisCourtTableViewController.m */; };
 		3E619BE1180A989900EA3EEB /* FlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BE0180A989900EA3EEB /* FlipSegue.m */; };
 		3E619BE5180A9E4500EA3EEB /* TennisCourtMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619BE4180A9E4500EA3EEB /* TennisCourtMapViewController.m */; };
+		3E6AC8CF183B618E0059122B /* TennisCourtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AC8CE183B618E0059122B /* TennisCourtViewController.m */; };
 		3E878651182A3AD200B92FCC /* tennisheader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E87864F182A3AD200B92FCC /* tennisheader@2x.png */; };
 		3E878653182A3B7E00B92FCC /* tennisheader.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E878652182A3B7E00B92FCC /* tennisheader.png */; };
 		3EB3DB7C18278EC3005DE529 /* glyphicons_137_cogwheels.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB3DB7A18278EC3005DE529 /* glyphicons_137_cogwheels.png */; };
@@ -80,6 +81,8 @@
 		3E619BE0180A989900EA3EEB /* FlipSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipSegue.m; sourceTree = "<group>"; };
 		3E619BE3180A9E4500EA3EEB /* TennisCourtMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TennisCourtMapViewController.h; sourceTree = "<group>"; };
 		3E619BE4180A9E4500EA3EEB /* TennisCourtMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TennisCourtMapViewController.m; sourceTree = "<group>"; };
+		3E6AC8CD183B618E0059122B /* TennisCourtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TennisCourtViewController.h; sourceTree = "<group>"; };
+		3E6AC8CE183B618E0059122B /* TennisCourtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TennisCourtViewController.m; sourceTree = "<group>"; };
 		3E87864F182A3AD200B92FCC /* tennisheader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tennisheader@2x.png"; sourceTree = "<group>"; };
 		3E878652182A3B7E00B92FCC /* tennisheader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tennisheader.png; sourceTree = "<group>"; };
 		3EB3DB7A18278EC3005DE529 /* glyphicons_137_cogwheels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_137_cogwheels.png; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				3E619BDD180A7A0100EA3EEB /* TennisCourtTableViewController.m */,
 				3E619BE3180A9E4500EA3EEB /* TennisCourtMapViewController.h */,
 				3E619BE4180A9E4500EA3EEB /* TennisCourtMapViewController.m */,
+				3E6AC8CD183B618E0059122B /* TennisCourtViewController.h */,
+				3E6AC8CE183B618E0059122B /* TennisCourtViewController.m */,
 			);
 			name = TennisCourtControllers;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				3E3B070A1800F0460006EB79 /* main.m in Sources */,
 				3E37E21F1828E65F00D42E73 /* BottomUpSegue.m in Sources */,
 				3E0E2A7C1825A3BB008C3E21 /* LocationController.m in Sources */,
+				3E6AC8CF183B618E0059122B /* TennisCourtViewController.m in Sources */,
 				3E619BE5180A9E4500EA3EEB /* TennisCourtMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

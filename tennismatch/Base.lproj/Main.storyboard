@@ -306,7 +306,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="mWI-dY-GL9" kind="push" id="Cdi-mE-uFj"/>
+                                    <segue destination="mWI-dY-GL9" kind="push" identifier="showTennisCourt" id="Cdi-mE-uFj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -364,10 +364,10 @@
             </objects>
             <point key="canvasLocation" x="807" y="-87"/>
         </scene>
-        <!--View Controller-->
+        <!--Tennis Court View Controller-->
         <scene sceneID="HuO-E0-Y97">
             <objects>
-                <viewController id="mWI-dY-GL9" sceneMemberID="viewController">
+                <viewController id="mWI-dY-GL9" customClass="TennisCourtViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Lk-3L-QLd"/>
                         <viewControllerLayoutGuide type="bottom" id="WbA-3g-QrX"/>
@@ -375,9 +375,29 @@
                     <view key="view" contentMode="scaleToFill" id="3Eq-cp-TuT">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXj-4k-IcO">
+                                <rect key="frame" x="20" y="20" width="280" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfX-6B-dGx">
+                                <rect key="frame" x="20" y="59" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="71N-7m-d8a"/>
+                    <connections>
+                        <outlet property="courtNameLabel" destination="fXj-4k-IcO" id="XiY-qH-aKv"/>
+                        <outlet property="courtStreetLabel" destination="OfX-6B-dGx" id="ukc-6x-Clb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7Q-yq-LQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
